@@ -23,9 +23,11 @@ async function init() {
   if (site.profilePhoto) {
     document.getElementById('profile-photo').innerHTML = `<img src="${esc(img(site.profilePhoto))}" alt="${esc(site.guideName)}">`;
   }
-  if (site.heroImage) {
-    const hero = document.querySelector('.hero');
-    hero.style.setProperty('--hero-img', `url("${img(site.heroImage)}")`);
+  // The page can set a default header photo (data-default-image); a photo chosen in the editor always wins.
+  const hero = document.querySelector('.hero');
+  const heroSrc = site.heroImage || hero.dataset.defaultImage;
+  if (heroSrc) {
+    hero.style.setProperty('--hero-img', `url("${img(heroSrc)}")`);
     hero.classList.add('has-photo');
   }
 

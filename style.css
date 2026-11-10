@@ -133,3 +133,10 @@ a { color: inherit; }
 .lightbox[hidden] { display: none; }
 .lightbox img { max-height: 82vh; border-radius: 8px; }
 .lightbox-close { position: absolute; top: 1rem; right: 1.2rem; background: none; border: 0; color: #fff; font-size: 2.4rem; cursor: pointer; }
+
+/* Photo header version (/foto/) */
+.hero-photo.has-photo {
+  background-image: linear-gradient(180deg, rgba(10,20,30,.55) 0%, rgba(10,20,30,.15) 45%, rgba(10,20,30,.35) 100%), var(--hero-img);
+  background-position: center 65%;
+}
+.footer .credit { font-size: .78rem; opacity: .8; }
