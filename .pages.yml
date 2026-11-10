@@ -61,6 +61,7 @@ content:
     type: file
     path: content/site.json
     fields:
+      - { name: siteName, label: Website / company name, type: string }
       - { name: guideName, label: Your name, type: string }
       - { name: tagline, label: Slogan under your name, type: string }
       - { name: about, label: About me, type: text }
