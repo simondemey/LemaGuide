@@ -1,0 +1,74 @@
+# Pages CMS configuration — https://app.pagescms.org
+# This gives the guide simple forms to edit the website from a phone or computer.
+
+media:
+  input: images
+  output: images
+
+content:
+  - name: reviews
+    label: ⭐ Reviews
+    type: file
+    path: content/reviews.json
+    fields:
+      - name: reviews
+        label: Reviews (newest first)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Guest name, type: string }
+          - { name: country, label: Country, type: string }
+          - { name: date, label: Date of climb, type: date }
+          - name: rating
+            label: Stars
+            type: select
+            options:
+              values: [5, 4, 3, 2, 1]
+          - { name: text, label: What the guest said, type: text }
+          - { name: photo, label: Photo of the guest (optional), type: image }
+
+  - name: gallery
+    label: 📷 Photos
+    type: file
+    path: content/gallery.json
+    fields:
+      - name: photos
+        label: Photo gallery
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Photo, type: image }
+          - { name: caption, label: Short caption (optional), type: string }
+
+  - name: routes
+    label: 🏔️ Routes & tours
+    type: file
+    path: content/routes.json
+    fields:
+      - name: routes
+        label: Routes
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Route name, type: string }
+          - { name: days, label: Number of days, type: string }
+          - { name: difficulty, label: Difficulty, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: image, label: Photo (optional), type: image }
+
+  - name: site
+    label: ℹ️ About me & contact
+    type: file
+    path: content/site.json
+    fields:
+      - { name: guideName, label: Your name, type: string }
+      - { name: tagline, label: Slogan under your name, type: string }
+      - { name: about, label: About me, type: text }
+      - { name: profilePhoto, label: Photo of me, type: image }
+      - { name: heroImage, label: Big photo at the top of the site, type: image }
+      - { name: yearsExperience, label: Years of experience, type: string }
+      - { name: summits, label: Number of summits, type: string }
+      - { name: languages, label: Languages I speak, type: string }
+      - { name: whatsapp, label: "WhatsApp number (country code, no + or spaces, e.g. 255712345678)", type: string }
+      - { name: email, label: Email, type: string }
+      - { name: location, label: Where I am based, type: string }
