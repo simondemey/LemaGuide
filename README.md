@@ -6,7 +6,7 @@ All text, reviews and photos live in the `content/` folder and can be edited wit
 ```
 index.html, style.css, script.js   the website (no need to touch)
 foto/index.html                    same site, with a real Kilimanjaro photo at the top
-                                   (same content files; photo: Sergey Pesterev, CC BY-SA 4.0, Wikimedia Commons)
+                                   (same content files)
 content/site.json                  name, about text, contact, big photos
 content/routes.json                Kilimanjaro routes / tours
 content/reviews.json               guest reviews
