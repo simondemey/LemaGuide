@@ -1,3 +1,10 @@
 {
-  "photos": []
+  "photos": [
+    { "image": "images/gallery-uhuru-peak.jpg", "caption": "Uhuru Peak, 5,895 m" },
+    { "image": "images/gallery-sunrise.jpg", "caption": "Sunrise near the summit" },
+    { "image": "images/gallery-machame-camp.jpg", "caption": "Machame Camp" },
+    { "image": "images/gallery-high-camp.jpg", "caption": "Climbing towards high camp" },
+    { "image": "images/gallery-alpine-desert.jpg", "caption": "Crossing the alpine desert" },
+    { "image": "images/gallery-on-the-trail.jpg", "caption": "A rest on the trail" }
+  ]
 }
