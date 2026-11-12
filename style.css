@@ -84,7 +84,7 @@ a { color: inherit; }
   background: linear-gradient(160deg, var(--green), #6d8f5a);
   display: grid; place-items: center; font-size: 5rem; box-shadow: var(--shadow);
 }
-.about-photo img { width: 100%; height: 100%; object-fit: cover; }
+.about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .about-text p { margin: 0 0 1em; color: var(--muted); font-size: 1.05rem; }
 .facts { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: .6rem; }
 .facts li { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: .4rem 1rem; font-size: .92rem; }
