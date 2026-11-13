@@ -1,6 +1,10 @@
 {
   "photos": [
     {
+      "image": "images/gallery-whole-team.jpg",
+      "caption": "The whole team: guests, guides and porters"
+    },
+    {
       "image": "images/gallery-team-uhuru.jpg",
       "caption": "Team photo at Uhuru Peak"
     },
@@ -13,6 +17,10 @@
       "caption": "Celebrating at sunrise"
     },
     {
+      "image": "images/gallery-towards-kibo.jpg",
+      "caption": "Walking towards Kibo"
+    },
+    {
       "image": "images/gallery-mawenzi.jpg",
       "caption": "Mawenzi peak above the clouds"
     },
@@ -23,6 +31,10 @@
     {
       "image": "images/gallery-camp-clouds.jpg",
       "caption": "Camp above the clouds"
+    },
+    {
+      "image": "images/gallery-morning-tea.jpg",
+      "caption": "Morning tea at camp"
     },
     {
       "image": "images/gallery-heather-zone.jpg",
