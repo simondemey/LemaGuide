@@ -14,8 +14,6 @@ async function init() {
     const v = site[el.dataset.bind];
     if (v) el.textContent = v;
   });
-  const brand = site.siteName || site.guideName;
-  if (brand) document.title = `${brand} · Kilimanjaro Guide`;
   if (!site.siteName && site.guideName) document.querySelectorAll('[data-bind="siteName"]').forEach((el) => { el.textContent = site.guideName; });
   document.getElementById('year').textContent = new Date().getFullYear();
 
