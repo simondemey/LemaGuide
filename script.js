@@ -59,6 +59,7 @@ async function init() {
   }
 
   // Routes
+  document.getElementById('routes-intro').textContent = routes.intro || '';
   const routeList = routes.routes || [];
   document.getElementById('routes-list').innerHTML = routeList.length
     ? routeList.map((r) => `

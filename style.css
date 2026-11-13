@@ -147,3 +147,5 @@ a { color: inherit; }
 .service-icon { font-size: 2.2rem; line-height: 1; margin-bottom: .7rem; }
 .service h3 { font-size: 1.2rem; margin-bottom: .3rem; }
 .service p { color: var(--muted); margin: 0; font-size: .93rem; }
+.section-intro { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin: 0; }
+.section-intro:empty { display: none; }

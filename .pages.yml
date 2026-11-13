@@ -45,6 +45,7 @@ content:
     type: file
     path: content/routes.json
     fields:
+      - { name: intro, label: Text above the routes, type: text }
       - name: routes
         label: Routes
         type: object
