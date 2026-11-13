@@ -1,12 +1,14 @@
 {
   "routes": [
-    { "name": "Machame Route", "days": "6–7 days", "difficulty": "Challenging", "image": "",
+    { "name": "Machame Route", "days": "6–7 days", "difficulty": "Challenging", "image": "images/route-machame.jpg",
       "description": "The 'Whiskey Route'. Beautiful scenery through rainforest, moorland and the Barranco Wall. Good acclimatisation and a high success rate." },
-    { "name": "Lemosho Route", "days": "7–8 days", "difficulty": "Moderate", "image": "",
+    { "name": "Lemosho Route", "days": "7–8 days", "difficulty": "Moderate", "image": "images/route-lemosho.jpg",
       "description": "Quiet, remote start on the west side with wonderful views of the Shira Plateau. One of the best routes for acclimatisation." },
-    { "name": "Marangu Route", "days": "5–6 days", "difficulty": "Moderate", "image": "",
+    { "name": "Umbwe Route", "days": "6–7 days", "difficulty": "Very challenging", "image": "images/route-umbwe.jpg",
+      "description": "The shortest and steepest way up, through dense rainforest. Quiet and wild — for fit, experienced hikers." },
+    { "name": "Marangu Route", "days": "5–6 days", "difficulty": "Moderate", "image": "images/route-marangu.jpg",
       "description": "The 'Coca-Cola Route'. The only route with sleeping huts instead of tents. Same path up and down." },
-    { "name": "Rongai Route", "days": "6–7 days", "difficulty": "Moderate", "image": "",
+    { "name": "Rongai Route", "days": "6–7 days", "difficulty": "Moderate", "image": "images/route-rongai.jpg",
       "description": "Starts from the north, close to Kenya. Drier weather and fewer people — a good choice in the rainy season." }
   ]
 }

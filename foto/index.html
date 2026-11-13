@@ -16,6 +16,7 @@
     <a class="brand" href="foto/#top" data-bind="siteName">Kilimanjaro Guide</a>
     <nav>
       <a href="foto/#about">About</a>
+      <a href="foto/#tours">Tours</a>
       <a href="foto/#routes">Routes</a>
       <a href="foto/#gallery">Photos</a>
       <a href="foto/#reviews">Reviews</a>
@@ -55,12 +56,19 @@
         <ul class="facts">
           <li><strong>Based in</strong> <span data-bind="location"></span></li>
           <li><strong>Languages</strong> <span data-bind="languages"></span></li>
+          <li><strong>Tours in</strong> <span data-bind="countries"></span></li>
         </ul>
       </div>
     </section>
 
+    <section id="tours" class="section">
+      <p class="eyebrow">What we offer</p>
+      <h2>Tours in <span data-bind="countries">East Africa</span></h2>
+      <div class="services" id="services-list"></div>
+    </section>
+
     <section id="routes" class="section">
-      <p class="eyebrow">Routes & tours</p>
+      <p class="eyebrow">Kilimanjaro routes</p>
       <h2>Choose your way to the top</h2>
       <div class="cards" id="routes-list"></div>
     </section>

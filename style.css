@@ -140,3 +140,10 @@ a { color: inherit; }
   background-position: center 65%;
 }
 .footer .credit { font-size: .78rem; opacity: .8; }
+
+/* Tours / services */
+.services { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+.service { background: var(--surface); border-radius: var(--radius); padding: 1.4rem 1.3rem; box-shadow: var(--shadow); }
+.service-icon { font-size: 2.2rem; line-height: 1; margin-bottom: .7rem; }
+.service h3 { font-size: 1.2rem; margin-bottom: .3rem; }
+.service p { color: var(--muted); margin: 0; font-size: .93rem; }

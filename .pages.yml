@@ -41,7 +41,7 @@ content:
           - { name: caption, label: Short caption (optional), type: string }
 
   - name: routes
-    label: 🏔️ Routes & tours
+    label: 🏔️ Kilimanjaro routes
     type: file
     path: content/routes.json
     fields:
@@ -73,3 +73,11 @@ content:
       - { name: whatsapp, label: "WhatsApp number (country code, no + or spaces, e.g. 255712345678)", type: string }
       - { name: email, label: Email, type: string }
       - { name: location, label: Where I am based, type: string }
+      - { name: countries, label: "Countries you do tours in (e.g. Tanzania, Kenya, Uganda)", type: string }
+      - name: services
+        label: Tours I offer
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "Tour name (e.g. Safari tour)", type: string }
+          - { name: description, label: Short description, type: text }

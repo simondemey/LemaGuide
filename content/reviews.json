@@ -1,8 +1,3 @@
 {
-  "reviews": [
-    { "name": "Example guest", "country": "Belgium", "date": "2026-08-15", "rating": 5, "photo": "",
-      "text": "This is an example review. Replace it with a real review from one of your guests using the editor." },
-    { "name": "Example guest 2", "country": "Germany", "date": "2026-07-02", "rating": 5, "photo": "",
-      "text": "Another example review. Delete these examples once you have added real reviews." }
-  ]
+  "reviews": []
 }

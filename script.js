@@ -42,6 +42,22 @@ async function init() {
   const email = document.getElementById('email-link');
   if (site.email) email.href = `mailto:${site.email}`; else email.remove();
 
+  // Tours / services — the icon is picked from the name
+  const icons = [[/mountain|climb|trek|hik/i, '🏔️'], [/safari|wildlife/i, '🦁'], [/beach|zanzibar/i, '🏖️'], [/cultur|village/i, '🛖'], [/bik|cycl/i, '🚲']];
+  const services = (site.services || []).filter((s) => s.name);
+  const servicesEl = document.getElementById('services-list');
+  if (services.length) {
+    servicesEl.innerHTML = services.map((s) => `
+      <article class="service">
+        <div class="service-icon" aria-hidden="true">${(icons.find(([re]) => re.test(s.name)) || [, '🌍'])[1]}</div>
+        <h3>${esc(s.name)}</h3>
+        ${s.description ? `<p>${esc(s.description)}</p>` : ''}
+      </article>`).join('');
+  } else {
+    document.getElementById('tours').remove();
+    document.querySelectorAll('a[href$="#tours"]').forEach((a) => a.remove());
+  }
+
   // Routes
   const routeList = routes.routes || [];
   document.getElementById('routes-list').innerHTML = routeList.length

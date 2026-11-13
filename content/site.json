@@ -9,6 +9,29 @@
   "summits": "300+",
   "languages": "English, Spanish, German, Swahili",
   "whatsapp": "255756970241",
-  "email": "info@example.com",
-  "location": "Arusha, Tanzania"
+  "email": "lejasiafricaadventure@gmail.com",
+  "location": "Arusha, Tanzania",
+  "countries": "Tanzania, Kenya, Uganda",
+  "services": [
+    {
+      "name": "Mountain climbing",
+      "description": "Climb Kilimanjaro on the route that suits you, with an experienced local guide."
+    },
+    {
+      "name": "Safari tour",
+      "description": "Serengeti, Ngorongoro, Tarangire and more — see the Big Five up close."
+    },
+    {
+      "name": "Beach tour",
+      "description": "Relax on the white beaches of Zanzibar after your climb or safari."
+    },
+    {
+      "name": "Culture tour",
+      "description": "Visit local villages, markets and coffee farms and meet the people."
+    },
+    {
+      "name": "Biking tour",
+      "description": "Cycle through villages, farmland and the foothills of Kilimanjaro."
+    }
+  ]
 }
