@@ -1,10 +1,108 @@
 {
   "photos": [
-    { "image": "images/gallery-uhuru-peak.jpg", "caption": "Uhuru Peak, 5,895 m" },
-    { "image": "images/gallery-sunrise.jpg", "caption": "Sunrise near the summit" },
-    { "image": "images/gallery-machame-camp.jpg", "caption": "Machame Camp" },
-    { "image": "images/gallery-high-camp.jpg", "caption": "Climbing towards high camp" },
-    { "image": "images/gallery-alpine-desert.jpg", "caption": "Crossing the alpine desert" },
-    { "image": "images/gallery-on-the-trail.jpg", "caption": "A rest on the trail" }
+    {
+      "image": "images/gallery-team-uhuru.jpg",
+      "caption": "Team photo at Uhuru Peak"
+    },
+    {
+      "image": "images/gallery-summit-sunrise.jpg",
+      "caption": "Sunrise from the crater rim"
+    },
+    {
+      "image": "images/gallery-celebrating.jpg",
+      "caption": "Celebrating at sunrise"
+    },
+    {
+      "image": "images/gallery-mawenzi.jpg",
+      "caption": "Mawenzi peak above the clouds"
+    },
+    {
+      "image": "images/gallery-at-uhuru.jpg",
+      "caption": "At Uhuru Peak, 5,895 m"
+    },
+    {
+      "image": "images/gallery-camp-clouds.jpg",
+      "caption": "Camp above the clouds"
+    },
+    {
+      "image": "images/gallery-heather-zone.jpg",
+      "caption": "The heather zone below Kibo"
+    },
+    {
+      "image": "images/gallery-on-the-trail-smile.jpg",
+      "caption": "Smiles on the trail"
+    },
+    {
+      "image": "images/gallery-meru-cairn.jpg",
+      "caption": "Mount Meru rising above the clouds"
+    },
+    {
+      "image": "images/gallery-group-view.jpg",
+      "caption": "Looking out over the forest"
+    },
+    {
+      "image": "images/gallery-stella-point.jpg",
+      "caption": "Stella Point, 5,756 m"
+    },
+    {
+      "image": "images/gallery-tents-clouds.jpg",
+      "caption": "Tents and a sea of clouds"
+    },
+    {
+      "image": "images/gallery-forest-camp.jpg",
+      "caption": "Morning at the forest camp"
+    },
+    {
+      "image": "images/gallery-ridge-break.jpg",
+      "caption": "A break high on the mountain"
+    },
+    {
+      "image": "images/gallery-camp-morning.jpg",
+      "caption": "Good morning from camp"
+    },
+    {
+      "image": "images/gallery-porter.jpg",
+      "caption": "On the way up"
+    },
+    {
+      "image": "images/gallery-walking-down.jpg",
+      "caption": "Heading down after the summit"
+    },
+    {
+      "image": "images/gallery-summit-panorama.jpg",
+      "caption": "Panorama at the summit"
+    },
+    {
+      "image": "images/gallery-summit-panorama-2.jpg",
+      "caption": "The summit crater"
+    },
+    {
+      "image": "images/gallery-victory.jpg",
+      "caption": "Victory on the crater rim"
+    },
+    {
+      "image": "images/gallery-uhuru-peak.jpg",
+      "caption": "Uhuru Peak, 5,895 m"
+    },
+    {
+      "image": "images/gallery-sunrise.jpg",
+      "caption": "Sunrise near the summit"
+    },
+    {
+      "image": "images/gallery-machame-camp.jpg",
+      "caption": "Machame Camp"
+    },
+    {
+      "image": "images/gallery-high-camp.jpg",
+      "caption": "Climbing towards high camp"
+    },
+    {
+      "image": "images/gallery-alpine-desert.jpg",
+      "caption": "Crossing the alpine desert"
+    },
+    {
+      "image": "images/gallery-on-the-trail.jpg",
+      "caption": "A rest on the trail"
+    }
   ]
 }
