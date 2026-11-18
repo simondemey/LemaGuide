@@ -85,6 +85,15 @@ async function init() {
       </figure>`).join('')
     : '<p class="empty">Photos coming soon.</p>';
 
+  // Google review buttons — "Read" opens the profile, "Write" opens the review form
+  const reviewLink = String(site.googleReviewLink || '').trim();
+  if (reviewLink) {
+    document.getElementById('write-review').href = reviewLink;
+    document.getElementById('read-reviews').href = reviewLink.replace(/\/review\/?$/, '');
+  } else {
+    document.getElementById('review-actions').remove();
+  }
+
   // Reviews (newest first)
   const list = (reviews.reviews || []).slice().sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
   document.getElementById('reviews-list').innerHTML = list.length
@@ -101,7 +110,7 @@ async function init() {
           <div class="reviewer">${avatar}<div><strong>${esc(r.name)}</strong><small>${esc([r.country, date].filter(Boolean).join(' · '))}</small></div></div>
         </article>`;
     }).join('')
-    : '<p class="empty">Be the first to leave a review!</p>';
+    : '<p class="empty">Climbed with Lema? Be the first to leave a review!</p>';
 
   if (list.length) {
     const avg = list.reduce((s, r) => s + (Number(r.rating) || 5), 0) / list.length;

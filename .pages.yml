@@ -75,6 +75,7 @@ content:
       - { name: email, label: Email, type: string }
       - { name: location, label: Where I am based, type: string }
       - { name: countries, label: "Countries you do tours in (e.g. Tanzania, Kenya, Uganda)", type: string }
+      - { name: googleReviewLink, label: "Google review link (from 'Ask for reviews' in your Google Business Profile)", type: string }
       - name: services
         label: Tours I offer
         type: object
