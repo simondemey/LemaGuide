@@ -85,6 +85,20 @@ async function init() {
       </figure>`).join('')
     : '<p class="empty">Photos coming soon.</p>';
 
+  // Show the first photos; the rest open with "View all photos"
+  const SHOW = 6;
+  galleryEl.querySelectorAll('figure').forEach((f, i) => { if (i >= SHOW) f.classList.add('extra'); });
+  const moreBtn = document.getElementById('gallery-more');
+  if (photos.length > SHOW) {
+    moreBtn.hidden = false;
+    moreBtn.textContent = `View all ${photos.length} photos`;
+    moreBtn.addEventListener('click', () => {
+      const open = galleryEl.classList.toggle('show-all');
+      moreBtn.textContent = open ? 'Show fewer photos' : `View all ${photos.length} photos`;
+      if (!open) document.getElementById('gallery').scrollIntoView();
+    });
+  }
+
   // Google review buttons — "Read" opens the profile, "Write" opens the review form
   const reviewLink = String(site.googleReviewLink || '').trim();
   if (reviewLink) {
