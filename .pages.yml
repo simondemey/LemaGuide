@@ -28,7 +28,7 @@ content:
           - { name: photo, label: Photo of the guest (optional), type: image }
 
   - name: gallery
-    label: 📷 Photos
+    label: 📷 Mountain photos
     type: file
     path: content/gallery.json
     fields:
@@ -39,6 +39,20 @@ content:
         fields:
           - { name: image, label: Photo, type: image }
           - { name: caption, label: Short caption (optional), type: string }
+
+  - name: safari
+    label: 🦁 Safari
+    type: file
+    path: content/safari.json
+    fields:
+      - { name: intro, label: Text about your safaris, type: text }
+      - name: photos
+        label: Safari photos
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Photo, type: image }
+          - { name: caption, label: "Short caption (optional, e.g. Lions in the Serengeti)", type: string }
 
   - name: routes
     label: 🏔️ Kilimanjaro routes
@@ -66,6 +80,7 @@ content:
       - { name: guideName, label: Your name, type: string }
       - { name: tagline, label: Slogan under your name, type: string }
       - { name: about, label: About me, type: text }
+      - { name: logo, label: Company logo (shown in the big photo at the top), type: image }
       - { name: profilePhoto, label: Photo of me, type: image }
       - { name: heroImage, label: Big photo at the top of the site, type: image }
       - { name: yearsExperience, label: Years of experience, type: string }

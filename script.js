@@ -6,8 +6,34 @@ const load = (name) => fetch(`content/${name}.json`, { cache: 'no-cache' }).then
 // Images saved by the editor may start with "/" — make them relative so the site also works in a sub-folder (GitHub Pages).
 const img = (src) => (src ? String(src).replace(/^\//, '') : '');
 
+// Fills a photo section: shows the first 6 photos, the rest open with "View all photos".
+// The section's HTML has #<id>-list (the photos) and #<id>-more (the button).
+function renderGallery(id, list, altText, emptyHtml) {
+  const SHOW = 6;
+  const photos = (list || []).filter((p) => p.image);
+  const el = document.getElementById(`${id}-list`);
+  el.innerHTML = photos.length
+    ? photos.map((p, i) => `
+      <figure class="${i >= SHOW ? 'extra' : ''}" data-src="${esc(img(p.image))}" data-caption="${esc(p.caption)}">
+        <img src="${esc(img(p.image))}" alt="${esc(p.caption || altText)}" loading="lazy">
+        ${p.caption ? `<figcaption>${esc(p.caption)}</figcaption>` : ''}
+      </figure>`).join('')
+    : emptyHtml;
+  const btn = document.getElementById(`${id}-more`);
+  if (photos.length > SHOW) {
+    const label = `View all ${photos.length} photos`;
+    btn.hidden = false;
+    btn.textContent = label;
+    btn.addEventListener('click', () => {
+      const open = el.classList.toggle('show-all');
+      btn.textContent = open ? 'Show fewer photos' : label;
+      if (!open) document.getElementById(id).scrollIntoView();
+    });
+  }
+}
+
 async function init() {
-  const [site, routes, reviews, gallery] = await Promise.all([load('site'), load('routes'), load('reviews'), load('gallery')]);
+  const [site, routes, reviews, gallery, safari] = await Promise.all([load('site'), load('routes'), load('reviews'), load('gallery'), load('safari')]);
 
   // Simple text fields
   document.querySelectorAll('[data-bind]').forEach((el) => {
@@ -30,6 +56,10 @@ async function init() {
     hero.style.setProperty('--hero-img', `url("${img(heroSrc)}")`);
     hero.classList.add('has-photo');
   }
+
+  // Company logo in the header (can be changed in the editor)
+  const logo = document.getElementById('hero-logo');
+  if (site.logo) logo.src = img(site.logo);
 
   // Contact links
   const phone = String(site.whatsapp || '').replace(/\D/g, '');
@@ -74,30 +104,13 @@ async function init() {
       </article>`).join('')
     : '<p class="empty">Routes coming soon.</p>';
 
-  // Gallery
-  const photos = (gallery.photos || []).filter((p) => p.image);
-  const galleryEl = document.getElementById('gallery-list');
-  galleryEl.innerHTML = photos.length
-    ? photos.map((p) => `
-      <figure data-src="${esc(img(p.image))}" data-caption="${esc(p.caption)}">
-        <img src="${esc(img(p.image))}" alt="${esc(p.caption || 'Kilimanjaro photo')}" loading="lazy">
-        ${p.caption ? `<figcaption>${esc(p.caption)}</figcaption>` : ''}
-      </figure>`).join('')
-    : '<p class="empty">Photos coming soon.</p>';
-
-  // Show the first photos; the rest open with "View all photos"
-  const SHOW = 6;
-  galleryEl.querySelectorAll('figure').forEach((f, i) => { if (i >= SHOW) f.classList.add('extra'); });
-  const moreBtn = document.getElementById('gallery-more');
-  if (photos.length > SHOW) {
-    moreBtn.hidden = false;
-    moreBtn.textContent = `View all ${photos.length} photos`;
-    moreBtn.addEventListener('click', () => {
-      const open = galleryEl.classList.toggle('show-all');
-      moreBtn.textContent = open ? 'Show fewer photos' : `View all ${photos.length} photos`;
-      if (!open) document.getElementById('gallery').scrollIntoView();
-    });
-  }
+  // Photo galleries (mountain photos + safari photos)
+  renderGallery('gallery', gallery.photos, 'Kilimanjaro photo', '<p class="empty">Photos coming soon.</p>');
+  renderGallery('safari', safari.photos, 'Safari photo', '');
+  document.getElementById('safari-intro').textContent = safari.intro || '';
+  document.querySelectorAll('[data-whatsapp-safari]').forEach((a) => {
+    if (phone) { a.href = `https://wa.me/${phone}?text=${encodeURIComponent(`Hello ${site.guideName || ''}, I would like to go on a safari!`)}`; a.target = '_blank'; a.rel = 'noopener'; }
+  });
 
   // Google review buttons — "Read" opens the profile, "Write" opens the review form
   const reviewLink = String(site.googleReviewLink || '').trim();
@@ -133,8 +146,8 @@ async function init() {
 
   // Lightbox for photos
   const lb = document.getElementById('lightbox');
-  galleryEl.addEventListener('click', (e) => {
-    const fig = e.target.closest('figure');
+  document.addEventListener('click', (e) => {
+    const fig = e.target.closest('.gallery figure');
     if (!fig) return;
     lb.querySelector('img').src = fig.dataset.src;
     lb.querySelector('p').textContent = fig.dataset.caption || '';
